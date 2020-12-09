@@ -32,7 +32,7 @@
 #include <QStandardPaths>
 
 class GlobalAttributes {
-	private:
+	public:
 		/*! \brief Environment variables used to reference the pgModeler directories.
 
 		 PGMODELER_SCHEMAS_DIR   --> "schemas" folder  (SQL/XML generation schema files)
@@ -64,6 +64,7 @@ class GlobalAttributes {
 		PgModelerCLIPath,
 		PgModelerAppPath;
 
+	private:
 		/*! \brief Returns the current value for an environment variable. If the current value is a path and the same does not
 			exists then the function will return 'default_value' if it exists. Finally, if both current value and default
 			values does not exists the the fallback value is returned even if it not exists in the filesystem */
